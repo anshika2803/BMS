@@ -37,45 +37,48 @@ addDoctor(){
     return (
       <div className="mt-40 px-auto lg:px-40">
         <div className="my-4 flex justify-center items-center text-2xl font-medium">
-          <h1>Doctors</h1>
+          <h1>DOCTORS</h1>
         </div>
+          <div className = "flex items-center justify-center my-10">
+            <button className="px-8 py-1 bg-red-300 text-lg border hover:text-black" onClick={this.addDoctor}> +Add</button>
+          </div>
         <table className="min-w-full divide-y divide-gray-200 h-full ">
           <thead className="bg-gray-50 ">
             <tr>
               <th
                 scope="col"
-                className="  px-4 py-3 text-center text-xs  text-gray-500 uppercase tracking-wider"
+                className="  px-4 py-3 text-center text-lg  text-gray-500 uppercase tracking-wider"
               >
                 ID
               </th>
               <th
                 scope="col"
-                className="  px-4 py-3 text-center text-xs  text-gray-500 uppercase tracking-wider"
+                className="  px-4 py-3 text-center text-lg  text-gray-500 uppercase tracking-wider"
               >
                 Name
               </th>
               <th
                 scope="col"
-                className="  px-4 py-3 text-center text-xs  text-gray-500 uppercase tracking-wider"
+                className="  px-4 py-3 text-center text-lg  text-gray-500 uppercase tracking-wider"
               >
                 Hospital
               </th>
               <th
                 scope="col"
-                className="  px-4 py-3 text-center text-xs  text-gray-500 uppercase tracking-wider"
+                className="  px-4 py-3 text-center text-lg  text-gray-500 uppercase tracking-wider"
               >
                 Age
               </th>
 
               <th
                 scope="col"
-                className="  px-4 py-3 text-center text-xs  text-gray-500 uppercase tracking-wider"
+                className="  px-4 py-3 text-center text-lg  text-gray-500 uppercase tracking-wider"
               >
                 Patients
               </th>
               <th
                 scope="col"
-                className="  px-4 py-3 text-center text-xs  text-gray-500 uppercase tracking-wider"
+                className="  px-4 py-3 text-center text-lg  text-gray-500 uppercase tracking-wider"
               >
                 Actions
               </th>
@@ -86,14 +89,38 @@ addDoctor(){
                            this.state.doctors.map(
                                doctor =>
                                <tr key = {doctor.doctorId}>
-                                   <td>{ doctor.doctorId }</td>
-                                   <td>{ doctor.doctorName}</td>
-                                   <td>{ doctor.hospitalName}</td>
-                                   <td>{ doctor.Age}</td>
-                                   <td>{ doctor.noOfCases}</td>
-                                   <td>
-                                   <button onClick={ () => this.editDoctor(doctor.doctorId)} className="btn btn-info">Update </button>
-                                   <button style={{marginLeft: "10px"}} onClick={ () => this.deleteDoctor(doctor.doctorId)} className="btn btn-danger">Delete </button>
+                                   <td 
+                className="  px-4 py-3 text-center text-base  text-gray-500 uppercase tracking-wider"
+
+                                   
+                                   >{ doctor.doctorId }</td>
+                                   <td
+                                   
+                className="  px-4 py-3 text-center text-base  text-gray-500 uppercase tracking-wider"
+                                   
+                                   >{ doctor.doctorName}</td>
+                                   <td
+                                   
+                className="  px-4 py-3 text-center text-base  text-gray-500 uppercase tracking-wider"
+                                   
+                                   >{ doctor.hospitalName}</td>
+                                   <td
+                                   
+                className="  px-4 py-3 text-center text-base  text-gray-500 uppercase tracking-wider"
+                                   
+                                   >{ doctor.age}</td>
+                                   <td
+                                   
+                className="  px-4 py-3 text-center text-base  text-gray-500 uppercase tracking-wider"
+                                   
+                                   >{ doctor.noOfCases}</td>
+                                   <td
+                                   
+                className="  px-4 py-3 text-center text-base  text-gray-500 uppercase tracking-wider"
+                                   
+                                   >
+                                   <button onClick={ () => this.editDoctor(doctor.doctorId)} className="px-2 py-1 border hover:text-green-600">Update </button>
+                                   <button style={{marginLeft: "10px"}} onClick={ () => this.deleteDoctor(doctor.doctorId)} className="px-2 py-1 border hover:text-red-600">Delete </button>
 
                                    </td>
 

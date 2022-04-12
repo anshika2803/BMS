@@ -36,8 +36,11 @@ addDonor(){
     return (
       <div className="mt-40 px-auto lg:px-40">
         <div className="my-4 flex justify-center items-center text-2xl font-medium">
-          <h1>Donors</h1>
+          <h1>DONORS</h1>
         </div>
+        <div className = "row">
+            <button className="" onClick={this.addDonor}> +Add</button>
+          </div>
         <table className="min-w-full divide-y divide-gray-200 h-full ">
           <thead className="bg-gray-50 ">
             <tr>
@@ -99,10 +102,10 @@ addDonor(){
                                <tr key = {donor.donorId}>
                                    <td>{ donor.donorId }</td>
                                    <td>{ donor.donorName}</td>
-                                   <td>{ donor.Age}</td>
-                                   <td>{ donor.Gender}</td>
+                                   <td>{ donor.age}</td>
+                                   <td>{ donor.gender}</td>
                                    <td>{ donor.bloodType}</td>
-                                   <td>{ donor.RHType}</td>
+                                   <td>{ donor.rhtype}</td>
                                    <td>{ donor.ouncesOfBloodCollected}</td>
                                    <td>
                                    <button onClick={ () => this.editDonor(donor.donorId)} className="btn btn-info">Update </button>

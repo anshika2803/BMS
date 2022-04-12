@@ -6,7 +6,11 @@ export default class Home extends Component {
     return (
       <div className="">
         Home
-        <div></div>
+        <div>
+
+<img className="w-full" src="./Blood-Donation-1.jpg"></img>
+
+        </div>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DoctorService from '../services/DoctorService';
+import Navbar from '../components/Navbar';
 
 export default class CreateDoctor extends Component {
     constructor(props) {
@@ -8,7 +9,10 @@ export default class CreateDoctor extends Component {
         this.state = {
             doctorId: this.props.match.params.doctorId,
             doctorName: '',
-            doctorCode: ''          
+            hospitalName: '',
+            Age:'',
+            noOfCases:''
+
 
         }
         this.changeDoctorNameHandler = this.changeDoctorNameHandler.bind(this);
@@ -73,8 +77,10 @@ export default class CreateDoctor extends Component {
     render() {
         return (
             <div>
+                <Navbar />
                 <br></br>
                    <div className = "container">
+                   
                         <div className = "row">
                             <div className = "card col-md-6 offset-md-3 offset-md-3">
                                 {
@@ -99,8 +105,8 @@ export default class CreateDoctor extends Component {
                                         </div>
                                         <div className = "form-group">
                                             <label> Number Of Cases: </label>
-                                            <input placeholder="" name="Hospital Name" className="form-control" 
-                                                value={this.state.hospitalName} onChange={this.changeHospitalNameHandler}/>
+                                            <input placeholder="Number Of Cases" name="No Of Cases" className="form-control" 
+                                                value={this.state.noOfCases} onChange={this.changeNoOfCasesHandler}/>
                                         </div>
                                         
 

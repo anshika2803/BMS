@@ -37,8 +37,11 @@ addPatient(){
     return (
       <div className="mt-40 px-auto lg:px-40">
         <div className="my-4 flex justify-center items-center text-2xl font-medium">
-          <h1>Patients</h1>
+          <h1>PATIENTS</h1>
         </div>
+        <div className = "row">
+            <button className="" onClick={this.addPatient}> +Add</button>
+          </div>
         <table className="min-w-full divide-y divide-gray-200 h-full ">
           <thead className="bg-gray-50 ">
             <tr>
@@ -118,13 +121,13 @@ addPatient(){
                                <tr key = {patient.patientId}>
                                    <td>{ patient.patientId }</td>
                                    <td>{ patient.patientName}</td>
-                                   <td>{ patient.Age}</td>
-                                   <td>{ patient.Gender}</td>
+                                   <td>{ patient.age}</td>
+                                   <td>{ patient.gender}</td>
                                    <td>{ patient.bloodType}</td>
-                                   <td>{ patient.RHType}</td>
+                                   <td>{ patient.rhtype}</td>
                                    <td>{ patient.caseDetails}</td>
                                    <td>{ patient.dateRequired}</td>
-                                   <td>{ patient.caseStatus}</td>
+                                   <td>{ `${patient.caseStatus}`}</td>
                                    <td>{ patient.ouncesOfBloodRequired}</td>
                                    <td>
                                    <button onClick={ () => this.editPatient(patient.patientId)} className="btn btn-info">Update </button>
